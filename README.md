@@ -1,23 +1,25 @@
-# Project BOPHELO
+# Project BOPHELO: Simulation Code
 
-### Redesigning Tuberculosis Care Through Community Centred Systems Engineering
+This repository contains a conceptual healthcare pathway diagram, a synthetic
+patient simulation, and a proposed monitoring framework for a rural Lesotho TB
+care intervention developed for a Partners In Health Canada case competition.
 
-**Competition:** Partners In Health Canada Case Competition
+## Running the code
 
-**Research Areas:** Global Health | Health Systems Engineering | Computational Modeling | Health Equity
+Install Python 3 and Graphviz (the system executable), then run:
 
-**Technologies:** Python, NumPy, Pandas, Matplotlib, Graphviz
+```bash
+pip install -r requirements.txt
+python tb_simulation.py
+python pipeline_diagram.py
+python monitoring_framework.py
+```
 
-## Overview
+The simulation writes `simulation_summary.csv` and `diagnostic_comparison.png`.
+The diagram writes `care_pipeline.png`. These are generated outputs.
 
-Project BOPHELO was developed for a Partners In Health Canada case competition focused on addressing delayed tuberculosis care seeking in rural Lesotho.
-
-Drawing on principles of health equity, community engagement, and person centred care, our team proposed a redesigned healthcare delivery framework that addresses the structural barriers preventing individuals from accessing timely diagnosis and treatment.
-
-The project integrates community health workers, coordinated clinical referrals, transportation and nutritional support, and continued patient accompaniment into a unified healthcare pathway.
-
-To explore the potential impact of this intervention, I developed a Python simulation involving 5,000 synthetic patient records, comparing conventional tuberculosis care pathways with our proposed model.
-
-The simulation examined diagnostic delays, missed appointments, treatment dropout, and healthcare encounters, while a complementary monitoring framework outlined potential evaluation indicators across 5, 10, and 15 years.
-
-The computational findings are exploratory and based on hypothetical assumptions rather than observed clinical outcomes.
+**Important:** The simulated 5,000 patients, assumptions, probabilities, and
+resulting improvements are hypothetical. The model is not calibrated to real
+Lesotho patient data and cannot establish clinical effectiveness, transmission
+reduction, or treatment benefit. The infectious-days variable is a simplified
+proxy rather than a validated infectiousness model.
